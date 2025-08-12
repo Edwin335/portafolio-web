@@ -97,6 +97,27 @@ def eliminar_proyecto(id):
             return jsonify({"error": "Proyecto no encontrado"}), 404
     except Exception as e:
         return jsonify({"error": str(e)}), 500
+    
+# Ruta inciar sesion
+usuarios_collection = db["usuarios"]
+@app.route('/api/login', methods=['POST'])
+def login():
+    data = request.get_json()
+    username = data.get('username')
+    password = data.get('password')
+
+    if not username or not password:
+        return jsonify({'error': 'Faltan credenciales'}), 400
+
+    usuario = usuarios_collection.find_one({
+        'username': username,
+        'password': password
+    })
+
+    if usuario:
+        return jsonify({'success': True}), 200
+    else:
+        return jsonify({'success': False, 'message': 'Credenciales inválidas'}), 401   
 
 if __name__ == '__main__':
     app.run(port=3000, debug=True)

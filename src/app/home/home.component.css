@@ -1,0 +1,711 @@
+/* Cambiar el color de texto de los enlaces a #FCE4B4 */
+.navbar-nav .nav-link, .navbar-brand {
+  color: white !important; /* Asegura que el texto sea de color white */
+}
+.navbar{
+  padding: 0%;
+}
+/* Cambiar el color del icono del botón hamburguesa */
+.navbar-toggler-icon {
+  background-image: url('https://imgur.com/VFAxY8W.png'); /* Ruta de tu imagen */
+  background-size: contain; /* Asegura que la imagen se ajuste correctamente */
+  background-repeat: no-repeat; /* Evita que se repita la imagen */
+  background-position: center; /* Centra la imagen */
+  width: 30px; /* Ajusta el tamaño según sea necesario */
+  height: 30px; /* Ajusta el tamaño según sea necesario */
+  border: none; /* Elimina el borde si hay uno */
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  width: 100%;
+  overflow-x: hidden;
+}
+#navbarNav{
+  background-image: 
+    linear-gradient(to bottom, rgba(0, 0, 0, 0) 60%, #000), /* Degradado inferior */
+    url('https://imgur.com/u6zcURj.jpg'); /* Imagen de fondo */
+  background-size: cover;
+  background-position: center;
+  padding-top: 20px;
+  padding-bottom: 90px;
+  width: 100%;
+  
+}
+.navbar-personalizada {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  background-color: rgba(45, 36, 31, 0.3); /* oscuro semi-transparente */
+  padding: 12px 20px;
+  border-radius: 20px;
+  margin: auto auto 20px auto;
+  max-width: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+.nav-item {
+  display: flex;
+  align-items: center;
+  background-color: #1a1a1a;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  cursor: pointer; /* para que aparezca la manito del cursor */
+}
+.nav-item:hover {
+  background-color: #6a3bff;
+}
+.nav-item i {
+  font-size: 1.2rem;
+}
+.navbar-nav {
+  gap: 12px;        /* ajusta el número a tu gusto */
+}
+.close-menu{
+    display: none;
+  }
+
+/*Donde va la intro del Portafolio*/
+.hero-section {
+  height: 80vh;
+  background: rgb(0, 0, 0);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0px 20px 0px 20px;
+  position: relative;
+  overflow: hidden;
+}
+.hero-content {
+  max-width: 800px;
+}
+.tagline {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  color: #ccc;
+  margin-bottom: 10px;
+}
+h1 {
+  font-size: 2.5rem;
+  margin: 0;
+}
+h1 .highlight {
+  color: #9c5fff;
+}
+.description {
+  margin: 20px 0;
+  font-size: 1.2rem;
+  color: #bbb;
+}
+.cta-button {
+  background-color: #6a3bff;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.cta-button:hover {
+  background-color: #4b2ccc;
+}
+/* Fade-in effect */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/*Seccion de Acerca de Mi*/
+ .containes-aboutMe {
+    color: white;
+    display: flex;
+    padding-left: 20%;
+    padding: 5% 20% 5% 20%;
+    flex-direction: column;  /* Para apilar los elementos verticalmente */
+    align-items: center;     /* Centra horizontalmente */
+    justify-content: center; /* Centra verticalmente (si tiene altura definida) */
+    text-align: center;      /* Centra el texto */
+  }
+  .hrAbout{
+    border: none;
+    height: 5px;  /* altura de la línea */
+    width: 10%;
+    margin: 1rem 0;
+    background: linear-gradient(to right, transparent, #ffffff, transparent);
+    border-radius: 2px;
+  }
+  .colorHrr {
+  color: #9c5fff;
+  font-weight: 600; /* Opcional, para que resalte más */
+}
+.btn-custom {
+  background-color: #34126b;
+  color: white;
+  border: none;
+}
+.btn-custom:hover {
+  background-color: #521cb0; /* un tono más oscuro para el hover */
+  color: white;
+}
+
+
+/*Estilos para la seccion de Habilidades*/
+.containes-habilidades{
+  display: flex;
+  align-items: center;
+  margin-top: 200px;
+  margin-bottom: 200px;
+  gap: 4rem;
+  justify-content: center;
+  align-items: center;
+}
+.grid {
+  display: grid;
+  padding: 20px;
+  grid-template-columns: repeat(4, 70px);
+  grid-template-rows: repeat(3, 70px);
+  gap: 20px;
+}
+.icon {
+  width: 70px;
+  height: 70px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(6px);
+  border-radius: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+.icon:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 8px #7547bf;
+}
+.icon img {
+  width: 46px;
+  height: 46px;
+}
+.text h1 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  color: white;
+}
+
+
+/*Proyectos donde se ven y se insertan*/
+.proyectosUno{
+  background-size: cover;
+  background-position: center;
+  padding-top: 20px;
+  overflow-x: hidden;
+}
+.hr-gradient2 {
+  border: none;
+  height: 3px;
+  width: 50%;
+  margin: 20px auto;
+  background: linear-gradient(to right, transparent, #ffffff, transparent);
+   border-radius: 2px;
+  margin-bottom: 60px; 
+}
+.cargar-proyecto{
+  background-image: url('https://imgur.com/UWfDanG.jpg');
+  margin-left: 10%;
+  margin-right: 10%;
+  padding: 15px;
+  border-radius: 15px;
+}
+.descripcionStyle {
+  display: flex;
+  flex-direction: column; /* hace que los hijos se acomoden en columna */
+  align-items: center;    /* opcional: centra horizontalmente los elementos */
+  gap: 15px;              /* separa cada elemento verticalmente */
+  margin-top: 20px;
+  padding: 0 30% 0 30%;
+}
+.descripcionStyle input, textarea{
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* negro con transparencia */
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  resize: none;
+  text-align: center; /* Centra horizontalmente el placeholder y el texto */
+}
+.inputsStyle{
+  display: flex;          /* pone los inputs en fila */
+  justify-content: center; /* centra horizontalmente los inputs dentro del div */
+  gap: 20px;              /* separa un poco los inputs entre sí */
+}
+input[type="file"] {
+  margin-right: 20px;
+  margin-bottom: 5px;
+  color: white; /* color del texto (nombre del archivo si aparece) */
+  background-color: black; /* azul Bootstrap */
+  padding: 8px;
+  border: none;
+  border: 3px solid #323038;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 250px; /* ajusta según tu diseño */
+}
+input[type="file"]::file-selector-button {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+input[type="file"] + span {
+  display: block;
+  margin-top: 4px;
+  color: #ccc;
+  font-size: 12px;
+}
+.navbar-personalizada-proyectos{
+  display: flex;
+  flex-wrap: wrap; /* Permite saltar a la siguiente fila */
+  color: white;
+  justify-content: center;
+  gap: 20px;
+  padding: 12px 20px;
+  border-radius: 20px;
+  margin: auto auto 20px auto;
+  max-width: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+.proyecto{
+  position: relative; /* añadir */
+  background-color: rgba(29, 27, 40, 0.3);
+  width: 30%;
+  padding: 10px 30px 5px 30px;
+  border-radius: 20px;
+}
+.proyecto p{
+  font-size: 20px;
+}
+.hr-gradient {
+  border: none;
+  height: 6px;
+  background: linear-gradient(to right, transparent, #9c5fff, transparent);
+   border-radius: 2px;
+}
+/*imagenes---*/
+.imagenes-proyecto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.img-lateral {
+  width: 100px;
+  height: auto;
+  border-radius: 15px;
+  opacity: 0.8;
+  transition: transform 0.3s ease;
+}
+.img-central {
+  width: 160px;
+  height: auto;
+  border-radius: 20px;
+  transition: transform 0.3s ease;
+}
+.img-central2 {
+  width: 190px;
+  height: 310px;
+  border-radius: 20px;
+  transition: transform 0.3s ease;
+}
+
+.navbar-personalizada-proyectos .tagline2{
+  font-size: 12px;
+  color: #707070;
+  word-wrap: break-word;     /* Para que rompa palabras largas */
+  overflow-wrap: break-word; /* Compatibilidad adicional */
+  white-space: normal;       /* Permite múltiples líneas */
+}
+.highlight {
+  color: #9c5fff;
+}
+.btn-eliminar {
+  background-color: #9c5fff; /* el mismo violeta highlight de tu diseño */
+  color: #eee;
+  border: none;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 8px 18px;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 0 8px #9c5fff;
+}
+.btn-eliminar:hover {
+  background-color: #09080C; /* blanco translúcido */
+  color: white;
+  box-shadow: 0 0 8px #9c5fff;
+}
+.btn-verMas {
+  background-color: #9c5fff; /* el mismo violeta highlight de tu diseño */
+  color: #eee;
+  border: none;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  padding: 8px 18px;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 0 8px #9c5fff;
+}
+.btn-verMas:hover {
+  background-color: #09080C; /* blanco translúcido */
+  color: white;
+  box-shadow: 0 0 8px #9c5fff;
+}
+
+
+/*El router*/
+.container {
+  padding-top: 25px;
+}
+#prin {
+  height: 1000px;
+  width: 100%;
+  background-color: black;
+}
+#principall{
+  padding-bottom: 50px;
+}
+
+/*Estilo de contactame*/
+
+.container-contact {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: stretch;
+  padding: 40px;
+  background-color: white;
+  height: 100%;
+}
+
+.card {
+  background-color: rgb(0, 0, 0);
+  color: white;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgb(0, 0, 0);
+  padding: 24px;
+  width: 300px;
+  text-align: center;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.form-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.thankyou-card {
+  background-color: #491d91;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  
+  height: 300px; /* Esto está bien */
+}
+
+.thankyou-card h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.thankyou-card p {
+  font-size: 16px;
+}
+
+.container-contact a {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.container-contact a:hover {
+  background-color: #491d91;
+  color: #ffe;
+}
+.container-contact a i {
+  color: inherit; /* El icono hereda el color del texto */
+  margin-right: 10px;
+  
+}
+
+@keyframes autoHover {
+  0%, 33.33%, 100% {
+    background-color: white;
+    color: black;
+  }
+  16.66% {
+    background-color: #491d91;
+    color: #ffe;
+  }
+}
+
+.container-contact .form-group:nth-of-type(1) a {
+  animation: autoHover 6s infinite;
+}
+
+.container-contact .form-group:nth-of-type(2) a {
+  animation: autoHover 6s infinite;
+  animation-delay: 2s;
+}
+
+.container-contact .form-group:nth-of-type(3) a {
+  animation: autoHover 6s infinite;
+  animation-delay: 4s;
+}
+
+/*Modal carrusel*/
+.modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex; justify-content: center; align-items: center;
+  z-index: 1000;
+}
+
+.modal-contenido {
+  position: relative;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.btn-cerrar {
+  position: absolute;
+  top: 10px; right: 10px;
+  background-color: rgb(255, 255, 255);
+  color: black;
+  border: none;
+  border-radius: 5px;
+}
+
+.imagen-carrusel {
+  max-width: 300px;
+  max-height: 500px;
+  border-radius: 20px;
+}
+
+.controles {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.controles button{
+  background-color: #9c5fff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  padding: 5px 15px;
+}
+.controles button:hover {
+  background-color: #09080C; /* blanco translúcido */
+  color: white;
+  box-shadow: 0 0 8px #9c5fff;
+}
+
+.carrusel video {
+  max-width: 300px;
+  max-height: 500px;
+  border-radius: 20px;
+  object-fit: cover; /* Esto hace que el video se ajuste sin deformarse */
+}
+/* Media query para pantallas más pequeñas */
+@media (max-width: 900px) {
+  .navbar-collapse {
+    position: fixed; /* Fija el menú en la pantalla */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #FCE4B4; /* Fondo oscuro */
+    display: none; /* Inicialmente oculto */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1050; /* Asegúrate de que se quede encima del contenido */
+    transition: all 0.3s ease; /* Transición suave */
+  }
+
+  .navbar-collapse.show {
+    display: flex; /* Muestra el menú cuando la clase 'show' está activa */
+  }
+
+  .navbar-nav {
+    text-align: center;
+    width: 100%;
+  }
+
+  .navbar-nav{
+    margin: 15px 0;
+  }
+  .navbar-collapse.show .navbar-nav .nav-link {
+    color: white !important;
+  }
+  .close-menu {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 24px;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+  }
+  /*-----------------*/
+  .navbar-personalizada {
+    background-color: transparent !important;
+    box-shadow: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+    max-width: none;  /* por si hereda otro valor */
+  }
+  .nav-item {
+    width: 100%;
+    color: red;
+    justify-content: center;
+    margin: 5px 0;
+  }
+  .imagenes-proyecto {
+    flex-direction: column; /* apila las imágenes verticalmente */
+    align-items: center;     /* centra las imágenes en la columna */
+  }
+  .img-lateral{
+    display: none;
+  }
+
+  .img-lateral,
+  .img-central,
+  .img-central2 {
+    width: 80%; /* o 100% si deseas que ocupen todo el ancho disponible */
+    max-width: 300px; /* límite para que no se vean gigantes */
+  }
+  .btn-verMas{
+    margin: auto auto 20px auto;
+    padding: auto;
+  }
+  .btn-eliminar{
+    margin-right: 10px;
+  }
+    .proyecto {
+    width: 90%; /* 1 por fila en móviles */
+  }
+  .img-lateral:hover, .img-central:hover, .img-central2:hover {
+  transform: none;
+}
+  .container {
+    padding-top: 2px;
+    padding-left: 2px;
+  }
+
+  .inputsStyle {
+    flex-direction: column;  /* Cambia a columna */
+    align-items: center;     /* Centra los inputs */
+  }
+
+  input[type="file"] {
+    width: 90%;              /* Más ancho en móviles */
+    margin-right: 0;         /* Elimina margen lateral */
+  }
+
+  .descripcionStyle {
+    padding: 0 10% 0 10%;    /* Reduce el padding para dar más espacio */
+  }
+
+  .descripcionStyle input,
+  .descripcionStyle textarea {
+    width: 100%;             /* Que ocupen todo el ancho disponible */
+  }
+  .containes-habilidades{
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .grid {
+    grid-template-columns: repeat(3, 60px);
+    grid-template-rows: auto;
+    gap: 16px;
+  }
+
+  .icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .icon img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .text h1 {
+    font-size: 1.8rem;
+  }
+  .container-contact{
+    box-shadow: none;
+    flex-direction: column;
+    align-items: center; /* centra el contenido horizontalmente */
+  }
+  .card {
+    width: 100%;
+    max-width: 400px; /* controla el ancho máximo para que no se vea gigante */
+    margin: 0 auto 5px auto; /* centra horizontalmente y separa verticalmente */
+  }
+}

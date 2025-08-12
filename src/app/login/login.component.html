@@ -1,0 +1,9 @@
+<div class="login-wrapper">
+  <div class="login-form">
+    <h2>Iniciar sesión</h2>
+    <input [(ngModel)]="username" placeholder="Usuario" />
+    <input [(ngModel)]="password" placeholder="Contraseña" type="password" />
+    <button (click)="login()">Ingresar</button>
+    <p *ngIf="error" class="error-message">Credenciales inválidas</p>
+  </div>
+</div>

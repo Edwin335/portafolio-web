@@ -1,0 +1,238 @@
+<nav class="navbar navbar-expand-lg">
+  <button class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"    
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <!-- Botón "X" para cerrar el menú -->
+    <button class="close-menu" (click)="cerrarMenu()">✖</button>
+
+    <div class="navbar-personalizada">
+      <ul class="navbar-nav ms-auto">
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/login']" (click)="cerrarMenu()" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <i class="bi bi-box-arrow-in-right me-2"></i>Iniciar sesión
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" (click)="scrollToSection('proyectos')"  data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <i class="bi bi-briefcase me-2"></i>Proyectos
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" (click)="scrollToSection('contacto')"  data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <i class="bi bi-person-add me-2"></i>Contacto
+        </a>
+      </li>
+
+    </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+<section class="hero-section">
+  <div class="hero-content" data-aos="fade-down">
+    <p class="tagline">Bienvenido</p>
+    <h1><span>Hola, soy Edwin Pabón</span><br> Desarrollador de <span class="highlight">Software</span></h1>
+    <p class="description">
+      Apasionado por el desarrollo web y la creación de soluciones digitales. 
+      Explora mis proyectos, ideas y soluciones donde la tecnología y la creatividad se unen para generar impacto.
+    </p>
+    <button class="cta-button" (click)="scrollToSection('proyectos')">Ver mis proyectos</button>
+  </div>
+</section>
+
+  <div class="containes-aboutMe">
+        <h1 class="about" data-aos="fade-up" data-aos-delay="100">Acerca de</h1>
+        <hr class="hrAbout">
+        <p class="description" data-aos="zoom-in" data-aos-delay="100">
+            Desarrollador de Software con conocimientos intermedios en bases de datos 
+            <span class="colorHrr">MySQL</span> y <span class="colorHrr">MongoDB</span>. Experiencia en 
+            <span class="colorHrr">JavaScript</span>, <span class="colorHrr">TypeScript</span>, <span class="colorHrr">HTML</span>, <span class="colorHrr">CSS</span>, 
+            <span class="colorHrr">Python</span> y desarrollo web con <span class="colorHrr">Angular</span>. Manejo 
+            <span class="colorHrr">WordPress</span> como sistema de gestión de contenidos. <br> Además de mis conocimientos técnicos, me destaco por mi capacidad de 
+            aprendizaje rápido, el trabajo en equipo y un alto compromiso con la calidad del software. Me caracterizo por actuar con honestidad 
+            y responsabilidad en cada proyecto que emprendo.
+        </p>
+        <a href="assets/cv.pdf" target="_blank" class="btn btn-custom" data-aos="zoom-out-up" data-aos-delay="100">
+          <i class="bi bi-file-earmark-text" style="margin-right: 6px;"></i> Ver CV
+        </a>
+  </div>
+
+<div class="containes-habilidades">
+      <div class="text">
+      <h1 data-aos="zoom-in" data-aos-delay="100">Herramientas<br>y tecnologías que manejo<br><span style="color: #9c5fff;">Nivel Intermedio</span></h1>
+    </div>
+    <div class="grid">
+      <div class="icon" data-aos="fade-up" data-aos-delay="0">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" />
+      </div>
+
+      <div class="icon" data-aos="flip-left" data-aos-delay="100"></div>
+
+      <div class="icon" data-aos="fade-up" data-aos-delay="100">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" />
+      </div>
+
+      <div class="icon" data-aos="fade-up" data-aos-delay="200">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" />
+      </div>
+
+      <div class="icon" data-aos="flip-left" data-aos-delay="100"></div>
+
+      <div class="icon" data-aos="fade-up" data-aos-delay="300">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" />
+      </div>
+
+      <div class="icon" data-aos="fade-up" data-aos-delay="400">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" alt="Angular" />
+      </div>
+
+      <div class="icon" data-aos="flip-left" data-aos-delay="100"></div>
+
+      <div class="icon" data-aos="fade-up" data-aos-delay="500">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" />
+      </div>
+
+      <div class="icon" data-aos="fade-up" data-aos-delay="600">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" />
+      </div>
+
+      <div class="icon" data-aos="fade-up" data-aos-delay="700">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" />
+      </div>
+
+      <div class="icon" data-aos="fade-up" data-aos-delay="800">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-original.svg" alt="WordPress" />
+      </div>
+
+    </div>
+  </div>
+
+  
+<div class="proyectosUno">
+    <h2 data-aos="zoom-out" data-aos-delay="100" style="text-align: center; color: white;"><span>Portafolio de</span><br><span class="highlight">Proyectos </span>realizados</h2>
+    <hr class="hr-gradient2">
+
+
+    <div *ngIf="isLoggedIn" class="cargar-proyecto" data-aos="zoom-out" data-aos-delay="100">
+        <h3 style="color:white; text-align: center; margin-top: 10px; margin-bottom: 40px;">Subir nuevo proyecto</h3>
+        <div class="inputsStyle">        
+              <input type="file" (change)="onImageChange($event, 0, 'principales')">
+              <input type="file" (change)="onImageChange($event, 1, 'principales')">
+              <input type="file" (change)="onImageChange($event, 2, 'principales')">
+        </div>
+        <div class="inputsStyle">             
+              <input type="file" (change)="onImageChange($event, 0, 'carrusel')">
+              <input type="file" (change)="onImageChange($event, 1, 'carrusel')">
+              <input type="file" (change)="onImageChange($event, 2, 'carrusel')">
+        </div>
+        <div class="descripcionStyle">
+              <input type="text" placeholder="Nombre del Aplicativo" [(ngModel)]="nuevoProyecto.titulo">
+              <textarea rows="3" placeholder="Descripción" [(ngModel)]="nuevoProyecto.descripcion"></textarea>
+              <button class="cta-button" style="background-color: #8d57a9;" (click)="agregarProyecto()">Agregar Proyecto</button>
+        </div>
+    </div> 
+  
+</div>
+
+
+<div id="proyectos" class="proyectos">
+    <div class="navbar-personalizada-proyectos">
+      <div *ngFor="let proyecto of proyectos" class="proyecto" data-aos="zoom-out-up" data-aos-delay="100">
+          <hr class="hr-gradient">
+        <div class="imagenes-proyecto">
+          <img class="img-lateral" [src]="proyecto.imagenesPrincipales[0]" alt="Lateral izquierda">
+          <img class="img-central" [src]="proyecto.imagenesPrincipales[1]" alt="Centro">
+          <img class="img-lateral" [src]="proyecto.imagenesPrincipales[2]" alt="Lateral derecha">
+
+        </div>
+        <p>Aplicativo para <span class="highlight">{{ proyecto.titulo }}</span></p>
+        <p class="tagline2">{{ proyecto.descripcion }}</p>
+        <button *ngIf="isLoggedIn" class="btn-eliminar" (click)="eliminarProyecto(proyecto._id)">
+          <img src="https://imgur.com/bgWgEkg.png" alt="icono eliminar" width="16" height="16" style="margin-right: 6px;">
+          Eliminar
+        </button>
+        <button class="btn-verMas" (click)="abrirCarrusel(proyecto.imagenesCarrusel)">
+          <img src="https://i.imgur.com/EhpELw2.png" alt="icono eliminar" width="16" height="16" style="margin-right: 6px;">
+          Ver imágenes
+        </button>
+      </div>
+    </div>
+</div>
+
+
+
+
+  <div id="contacto" class="container-contact">
+    <!-- Form Card -->
+    <div class="card form-card" data-aos="fade-left" data-aos-delay="100">
+      <h3 style="margin-bottom: 20px;">Ponte en contacto</h3>
+      <div class="form-group">
+        <a href="https://www.instagram.com/irodriix/" class="nav-item">
+          <i class="fab fa-instagram"></i>
+          Instagram
+        </a>
+      </div>
+
+      <div class="form-group">
+        <a href="https://www.linkedin.com/in/edwin-javier-pabon-rodriguez/" class="nav-item">
+          <i class="fab fa-linkedin"></i>
+          LinkedIn
+        </a>
+      </div>
+
+      <div class="form-group">
+        <a href="mailto:edwinjavierpabonrodriguez@gmail.com" class="nav-item">
+          <i class="fas fa-envelope"></i>
+          Gmail
+        </a>
+      </div>
+    </div>
+
+    <!-- Thank You Card -->
+    <div class="card thankyou-card" data-aos="fade-right" data-aos-delay="100">
+      <h1>¡Genial!</h1>
+      <p>Contáctame para<br> brindarte más información!</p>
+    </div>
+  </div>
+
+
+<div class="modal" *ngIf="mostrarModal" (click)="cerrarCarrusel()">
+  <div class="modal-contenido" (click)="$event.stopPropagation()">
+    <button class="btn-cerrar" (click)="cerrarCarrusel()">X</button>
+    
+    <div class="carrusel">
+  <ng-container *ngIf="imagenesCarrusel.length > 0">
+    <ng-container *ngFor="let media of imagenesCarrusel; let i = index">
+      <ng-container *ngIf="i === imagenActual">
+       <ng-container *ngIf="isImage(media); else videoTemplate">
+        <img [src]="media" class="imagen-carrusel" alt="Imagen del proyecto">
+      </ng-container>
+      <ng-template #videoTemplate>
+        <video controls class="video-carrusel">
+          <source [src]="media" type="video/mp4">
+          Tu navegador no soporta videos.
+        </video>
+</ng-template>
+      </ng-container>
+    </ng-container>
+  </ng-container>
+</div>
+
+    <div class="controles">
+      <button (click)="anteriorImagen()">Anterior</button>
+      <button (click)="siguienteImagen()">Siguiente</button>
+    </div>
+  </div>
+</div>
