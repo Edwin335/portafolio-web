@@ -58,6 +58,7 @@ export class HomeComponent implements OnInit {
       AOS.refresh();
     });
 
+    /* este es el codigo que funciona de forma locar antes de usar render
     this.http.get<Proyecto[]>('http://localhost:3000/api/proyectos').subscribe({
       next: (data) => {
         this.proyectos = data;
@@ -65,7 +66,17 @@ export class HomeComponent implements OnInit {
       error: (err) => {
         console.error('Error al cargar proyectos:', err);
       }
-    });
+    });*/
+
+    //este es el codigo que funciona pero con render
+    this.http.get<Proyecto[]>('https://backend-portafolio-3skv.onrender.com/api/proyectos').subscribe({
+    next: (data) => {
+      this.proyectos = data;
+    },
+    error: (err) => {
+      console.error('Error al cargar proyectos:', err);
+    }
+  });
   }
 
   scrollToSection(sectionId: string) {
@@ -113,7 +124,24 @@ export class HomeComponent implements OnInit {
     formData.append('titulo', this.nuevoProyecto.titulo);
     formData.append('descripcion', this.nuevoProyecto.descripcion);
 
+   /* Este es el codigo funcioan de forma local sin usar render
     this.http.post<Proyecto>('http://localhost:3000/api/proyectos', formData).subscribe({
+      next: (proyectoGuardado) => {
+        this.proyectos.push(proyectoGuardado);
+        this.nuevoProyecto = {
+          imagenesPrincipales: [null, null, null],
+          imagenesCarrusel: [null, null, null],
+          titulo: '',
+          descripcion: ''
+        };
+      },
+      error: (err) => {
+        console.error('Error al guardar el proyecto:', err);
+      }
+    });*/
+
+    //Este es el codigo pero usando render en la url
+      this.http.post<Proyecto>('https://backend-portafolio-3skv.onrender.com/api/proyectos', formData).subscribe({
       next: (proyectoGuardado) => {
         this.proyectos.push(proyectoGuardado);
         this.nuevoProyecto = {
@@ -130,6 +158,7 @@ export class HomeComponent implements OnInit {
   }
 
   eliminarProyecto(id: string) {
+    /* Este es el codigo funcional de forma locar sin usar render
     if (confirm('¿Estás seguro de eliminar este proyecto?')) {
       this.http.delete(`http://localhost:3000/api/proyectos/${id}`).subscribe({
         next: () => {
@@ -141,6 +170,18 @@ export class HomeComponent implements OnInit {
         }
       });
     }
+    */
+
+    //este es el codigo pero usando render en la url
+      this.http.delete(`https://backend-portafolio-3skv.onrender.com/api/proyectos/${id}`).subscribe({
+      next: () => {
+        this.proyectos = this.proyectos.filter(p => p._id !== id);
+      },
+      error: (err) => {
+        console.error('Error al eliminar proyecto:', err);
+        alert('No se pudo eliminar el proyecto, intenta de nuevo.');
+      }
+    });
   }
 
   abrirCarrusel(imagenes: string[]) {
