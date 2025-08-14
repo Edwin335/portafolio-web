@@ -10,7 +10,7 @@ export class AuthService {
   loggedIn$ = this.loggedInSubject.asObservable(); // observable que puedes suscribirte
 
   //private apiUrl = 'http://localhost:3000/api/login'; // URL del backend como lo tenemos antes de usar Render
-  private apiUrl = 'https://backend-portafolio-4ftf.onrender.com/api/login'; // URL del backend en Render
+  private apiUrl = 'https://backend-portafolio-mwhu.onrender.com/api/login'; // URL del backend en Render
 
   constructor(private http: HttpClient) {
       // Verifica y elimina el token de localStorage al cargar la aplicación

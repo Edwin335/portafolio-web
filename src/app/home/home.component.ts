@@ -69,7 +69,7 @@ export class HomeComponent implements OnInit {
     });*/
 
     //este es el codigo que funciona pero con render
-    this.http.get<Proyecto[]>('https://backend-portafolio-4ftf.onrender.com/api/proyectos').subscribe({
+    this.http.get<Proyecto[]>('https://backend-portafolio-mwhu.onrender.com/api/proyectos').subscribe({
     next: (data) => {
       this.proyectos = data;
     },
@@ -141,7 +141,7 @@ export class HomeComponent implements OnInit {
     });*/
 
     //Este es el codigo pero usando render en la url
-      this.http.post<Proyecto>('https://backend-portafolio-4ftf.onrender.com/api/proyectos', formData).subscribe({
+      this.http.post<Proyecto>('https://backend-portafolio-mwhu.onrender.com/api/proyectos', formData).subscribe({
       next: (proyectoGuardado) => {
         this.proyectos.push(proyectoGuardado);
         this.nuevoProyecto = {
@@ -173,7 +173,7 @@ export class HomeComponent implements OnInit {
     */
 
     //este es el codigo pero usando render en la url
-      this.http.delete(`https://backend-portafolio-4ftf.onrender.com/api/proyectos/${id}`).subscribe({
+      this.http.delete(`https://backend-portafolio-mwhu.onrender.com/api/proyectos/${id}`).subscribe({
       next: () => {
         this.proyectos = this.proyectos.filter(p => p._id !== id);
       },
